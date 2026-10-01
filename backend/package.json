@@ -1,0 +1,24 @@
+{
+  "name": "medico-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "convex dev",
+    "codegen": "convex codegen",
+    "deploy": "convex deploy",
+    "import:fda": "node --max-old-space-size=4096 --env-file=.env.local scripts/import-openfda-ndc.mjs",
+    "seed:demo-prices": "node --env-file=.env.local scripts/seed-demo-store-prices.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@auth/core": "^0.41.1",
+    "@convex-dev/auth": "^0.0.95",
+    "convex": "^1.31.7",
+    "fflate": "^0.8.3",
+    "jose": "^6.2.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
+  }
+}
